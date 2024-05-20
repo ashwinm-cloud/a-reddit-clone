@@ -35,7 +35,7 @@ pipeline {
     }
     stage ('Quality Gate'){
       steps{
-        waitForQualityGate abortPipeline false. credentialsId: 'SonarQube-Token' 	      
+        waitForQualityGate abortPipeline: false. credentialsId: 'SonarQube-Token' 	      
       }
     }
     stage ('Install Dependencies'){
