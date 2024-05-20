@@ -22,7 +22,9 @@ pipeline {
     }
     stage ('Checkout from Git'){
       steps{
-        git branch: 'main', url: 'https://github.com/ashwinm-cloud/a-reddit-clone'
+        script { 	      
+          git branch: 'main', url: 'https://github.com/ashwinm-cloud/a-reddit-clone'
+	} 
       }	      
     }
     stage ('Sonarqube Analysis'){	  
