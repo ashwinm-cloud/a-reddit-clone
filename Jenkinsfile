@@ -25,7 +25,7 @@ pipeline {
     }
     stage ('Sonarqube Analysis'){	  
       steps {
-        withSonarQubeEnv('SonarQube-Server') {
+        withSonarQubeEnv('sonar-scanner') {
           sh "${SCANNER_HOME}/bin/sonar-scanner -Dsonar.projectName=reddit-clone-ci -Dsonar.projectKey=reddit-clone-ci"
         }
       }
