@@ -21,10 +21,8 @@ pipeline {
       }	      
     }
     stage ('Checkout from Git'){
-      steps{
-        script { 	      
+      steps{	      
           git branch: 'main', url: 'https://github.com/ashwinm-cloud/a-reddit-clone'
-	} 
       }	      
     }
     stage ('Sonarqube Analysis'){	  
@@ -37,7 +35,9 @@ pipeline {
     }
     stage ('Quality Gate'){
       steps{
-        waitForQualityGate abortPipeline: false. credentialsId: 'SonarQube-Token' 	      
+        script { 	      
+          waitForQualityGate abortPipeline: false. credentialsId: 'SonarQube-Token' 	      
+	}
       }
     }
     stage ('Install Dependencies'){
