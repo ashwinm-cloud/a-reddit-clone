@@ -10,7 +10,7 @@ pipeline {
     RELEASE = "1.0.0"
     DOCKER_USER = "ashwinmreddy"
     DOCKER_PASS = "dockerub"
-    IMAGE-NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
+    IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
     IMAGE_TAG = "${RELEASE}-${BUILD_NUMBER}"
     JENKINS_API_TOKEN = credentials("JENKINS_API_TOKEN")	  
   }
