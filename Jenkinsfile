@@ -9,7 +9,7 @@ pipeline {
     APP_NAME = "reddit-clone-app"
     RELEASE = "1.0.0"
     DOCKER_USER = "ashwinmreddy"
-    DOCKER_PASS = "dockerub"
+    DOCKER_PASS = "dockerhub"
     IMAGE_NAME = "${DOCKER_USER}" + "/" + "${APP_NAME}"
   }
   stages {
